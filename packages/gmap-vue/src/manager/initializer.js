@@ -35,6 +35,11 @@ export default (() => {
       // Do nothing if run from server-side
       return;
     }
+    
+    if(document.google) {
+      //The Google Api already was initiated
+      return;
+    }
 
     if (!isApiSetUp) {
       isApiSetUp = true;
